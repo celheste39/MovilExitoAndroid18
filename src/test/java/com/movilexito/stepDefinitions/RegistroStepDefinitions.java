@@ -19,7 +19,7 @@ public class RegistroStepDefinitions {
     public void llenoLosCampos() {
         OnStage.theActorInTheSpotlight().attemptsTo(
                 AgregarCarrito.onMovilExito()
-        //        Registo.onMovilExito()
+                //Registo.onMovilExito()
         );
     }
     @Cuando("acepto los terminos y condiciones")

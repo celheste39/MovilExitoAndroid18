@@ -1,14 +1,12 @@
 package com.movilexito.tasks;
 
-import com.movilexito.interactions.HoldOnFor;
-import com.movilexito.interactions.ScrollingBajar;
+import com.movilexito.interactions.ExplicitWait;
 import com.movilexito.utils.Excel;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.actions.Scroll;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,9 +26,8 @@ public class Registo implements Task {
             e.printStackTrace();
         }
         actor.attemptsTo(
+                ExplicitWait.here(5),
                 Click.on(BTN_PERSONA),
-                ScrollingBajar.on(),
-                HoldOnFor.thisSeconds(10),
                 Click.on(BTN_REGISTRO_FORM)
                 );
 
